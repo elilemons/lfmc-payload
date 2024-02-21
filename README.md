@@ -11,10 +11,11 @@ From this [repo on GitHub](https://github.com/elilemons/lfmc-payload), select "U
 
 ### Development
 1. First clone the repo you created above if you have not done so already
-1. `cd %%PROJECT_NAME%% && cp .env.example .env` to copy the example environment variables
-1. `yarn && yarn dev` to install dependencies and start the dev server
-1. `open http://localhost:3000` to open the app in your browser
-2. `open http://localhost:3000/admin` to open the backend app in your browser
+   1. You can, if desired, spin this template up as is without creating a new repo
+2. `cd %%PROJECT_NAME%% && cp .env.example .env` to copy the example environment variables
+3. `yarn && yarn dev` to install dependencies and start the dev server
+4. `open http://localhost:3000` to open the app in your browser
+5. `open http://localhost:3000/admin` to open the backend app in your browser
 
 That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
 
