@@ -55,5 +55,10 @@ export const hero: Field = {
         condition: (_, { type } = {}) => ['highImpact', 'mediumImpact'].includes(type),
       },
     },
+    {
+      name: 'mediaIsBackground',
+      type: 'checkbox',
+      label: 'Use as Background Image',
+    },
   ],
 }

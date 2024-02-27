@@ -1,4 +1,4 @@
-import { ARCHIVE_BLOCK, CALL_TO_ACTION, CONTENT, MEDIA_BLOCK } from './blocks'
+import { ARCHIVE_BLOCK, CALL_TO_ACTION, CONTENT, FORM_BLOCK, MEDIA_BLOCK } from './blocks'
 import { LINK_FIELDS } from './link'
 import { MEDIA } from './media'
 import { META } from './meta'
@@ -26,6 +26,7 @@ export const PAGE = `
             link ${LINK_FIELDS()}
           }
           ${MEDIA}
+          mediaIsBackground
         }
         layout {
           ${CONTENT}
@@ -33,6 +34,7 @@ export const PAGE = `
           ${CONTENT}
           ${MEDIA_BLOCK}
           ${ARCHIVE_BLOCK}
+          ${FORM_BLOCK}
         }
         ${META}
       }

@@ -8,7 +8,12 @@ import RichText from '../../_components/RichText'
 
 import classes from './index.module.scss'
 
-export const HighImpactHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
+export const HighImpactHero: React.FC<Page['hero']> = ({
+  richText,
+  media,
+  links,
+  mediaIsBackground,
+}) => {
   return (
     <Gutter className={classes.hero}>
       <div className={classes.content}>
@@ -25,7 +30,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ richText, media, links 
           </ul>
         )}
       </div>
-      <div className={classes.media}>
+      <div className={mediaIsBackground ? classes.backgroundImage : classes.media}>
         {typeof media === 'object' && (
           <Fragment>
             <Media

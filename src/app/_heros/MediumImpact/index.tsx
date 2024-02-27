@@ -9,12 +9,15 @@ import RichText from '../../_components/RichText'
 import classes from './index.module.scss'
 
 export const MediumImpactHero: React.FC<Page['hero']> = props => {
-  const { richText, media, links } = props
+  const { mediaIsBackground, richText, media, links } = props
 
   return (
     <Gutter className={classes.hero}>
       <div className={classes.background}>
-        <RichText className={classes.richText} content={richText} />
+        <RichText
+          className={[classes.richText, mediaIsBackground && classes.noAfterShadow].join(', ')}
+          content={richText}
+        />
         {Array.isArray(links) && (
           <ul className={classes.links}>
             {links.map(({ link }, i) => {
@@ -27,7 +30,7 @@ export const MediumImpactHero: React.FC<Page['hero']> = props => {
           </ul>
         )}
       </div>
-      <div className={classes.media}>
+      <div className={mediaIsBackground ? classes.backgroundImage : classes.media}>
         {typeof media === 'object' && <Media className={classes.media} resource={media} />}
       </div>
     </Gutter>

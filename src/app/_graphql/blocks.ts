@@ -1,4 +1,5 @@
 import { CATEGORIES } from './categories'
+import { FORMS } from './forms'
 import { LINK_FIELDS } from './link'
 import { MEDIA } from './media'
 import { META } from './meta'
@@ -24,6 +25,13 @@ export const CONTENT = `
     enableLink
     link ${LINK_FIELDS()}
   }
+}
+`
+
+export const FORM_BLOCK = `
+...on FormBlock {
+  blockType
+  introContent
 }
 `
 
